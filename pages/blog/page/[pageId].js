@@ -1,9 +1,9 @@
-import BlogHome from '@/components/BlogInit';
 import { getPosts } from '@/lib/posts';
+import SiteHome from '@/components/sitehome'
 
 export default function Blog( { posts } ) {
     return (
-        <BlogHome posts={ posts } />
+        <SiteHome posts={ posts } />
     )
 }
 

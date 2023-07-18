@@ -1,10 +1,12 @@
 import { getPosts } from '@/lib/posts';
-import BlogHome from '@/components/BlogInit';
+import SiteHome from '@/components/sitehome'
 
-export default function Blog( { posts } ) {
-    return (
-        <BlogHome posts={ posts } />
-    )
+export default function Home( { posts } ) {
+	return (
+		<>
+			<SiteHome posts={ posts } />
+		</>
+	)
 }
 
 export async function getStaticProps() {
