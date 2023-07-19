@@ -21,7 +21,7 @@ export default function Contact() {
 		<>
 			<div className="page-container container mx-auto">
 				<Head>
-					<title>About - Personal Blog Template</title>    
+					<title>Contact - Personal Blog Template</title>    
 				</Head>
 				<SideBar />
 				<div className='ml-[360px] w-[calc(100%-360px)] after:clear-both'>

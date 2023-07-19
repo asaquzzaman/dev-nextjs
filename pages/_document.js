@@ -4,12 +4,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-	  	<meta charset="utf-8" />
-		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-		<meta content="Free Blog Template" name="keywords" />
-		<meta content="Free Website Template" name="description" />
+	  	<meta charSet="utf-8" />
+      <meta content="Free Blog Template" name="keywords" />
+      <meta content="Free Website Template" name="description" />
 	  </Head>
-      <body>
+      <body className='bg-[#f1f3ff]'>
 			<Main />
 			<NextScript />
       </body>

@@ -1,4 +1,4 @@
-import Post from "@/components/post"
+import Post from "@/components/singlePost"
 import { getPosts } from '@/lib/posts'
 import { getPost } from '@/lib/post'
 import { useRouter } from 'next/router'

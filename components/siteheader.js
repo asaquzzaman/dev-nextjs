@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
+import Image from 'next/image'
 
 export default function SiteHeader() {
     const router = useRouter();
@@ -15,6 +16,15 @@ export default function SiteHeader() {
                         </div>
                     </div>
                 </nav>
+            </div>
+            <div className='bg-[url(/banner.jpg)] h-[300px] w-full bg-no-repeat bg-[0_68%]'>
+                {/* <Image
+                    src="/banner.jpg"
+                    width={400}
+                    height={300}
+                    alt="Site Banner"
+                    className='absolute top-0 bottom-0 w-full'
+                /> */}
             </div>
         </header>
     )
