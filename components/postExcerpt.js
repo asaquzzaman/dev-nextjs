@@ -10,17 +10,18 @@ export default function SinglePost( { post } ) {
 
     return (
         <>
-            <div className='pt-[20px] px-[15px]'>
-                <div className='flex pb-[3rem] px-[1rem]'>
-                    <div className='pl-[15px] pr-[30px] w-[35%]'>
+            <div>
+                <div className='flex pb-[3rem] px-[1rem] sm:flex-col'>
+                    <div className='pl-[15px] pr-[30px] w-[35%] sm:w-full'>
                         <Image
                             alt=""
                             src={ `/blog-${randomIntFromInterval(1,7)}.jpg` }
-                            width={300}
-                            height={600}
+                            width={800}
+                            height={800}
+                            className='h-[200px] w-[300px] sm:h-auto sm:w-full'
                         />
                     </div>
-                    <div className='px-[15px] w-[65%]'>
+                    <div className='px-[15px] w-[65%] sm:w-full'>
                         <h3 className='mb-[0.5rem]'><Link className='text-[1.75rem] text-[#202C45] font-[700] leading-[1.5]' href={ `/blog/${post.postId}` }>{ post.title }</Link></h3>
                         <div className='mb-[1rem]'>
                             <small className='mr-2'><FontAwesomeIcon icon={faCalendarDays} /> { post.date }</small>
@@ -28,7 +29,7 @@ export default function SinglePost( { post } ) {
                             <small className='mr-2'><FontAwesomeIcon icon={faComments} /> 0 Comments</small>
                         </div>
                         <div className='mb-[1rem]' dangerouslySetInnerHTML={{__html: post.excerpt}} />
-                        <Link className='text-[#2A4B7C] font-[600]'  href={ `/blog/${post.postId}` }>Read More <i class="fa fa-angle-right"></i></Link>
+                        <Link className='text-[#2A4B7C] font-[600]'  href={ `/blog/${post.postId}` }>Read More </Link>
                     </div>
                 </div>
             </div>

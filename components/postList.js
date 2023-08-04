@@ -28,15 +28,16 @@ export default function PostList( { posts } ) {
                     )
                 } )
             }
-
-            <Pagination 
-                total={ Math.ceil( parseInt( posts.pageInfo.offsetPagination.total ) / parseInt( process.env.NEXT_PUBLIC_PER_PAGE ) ) } 
-                initialPage={ 1 }
-                page={ typeof router.query.pageId === 'undefined' ? 1 : parseInt( router.query.pageId ) } // Active page number
-                onChange={ async ( page ) => {
-                    router.replace( `/blog/page/${page}` )
-                } }
-            />
+            <div className='pb-4'>
+                <Pagination 
+                    total={ Math.ceil( parseInt( posts.pageInfo.offsetPagination.total ) / parseInt( process.env.NEXT_PUBLIC_PER_PAGE ) ) } 
+                    initialPage={ 1 }
+                    page={ typeof router.query.pageId === 'undefined' ? 1 : parseInt( router.query.pageId ) } // Active page number
+                    onChange={ async ( page ) => {
+                        router.replace( `/blog/page/${page}` )
+                    } }
+                />
+            </div>
         </div>
     )
 }
