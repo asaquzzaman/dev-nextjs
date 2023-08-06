@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@superfaceai/one-sdk": "^2.4.2",
     "autoprefixer": "10.4.14",
     "babel-plugin-macros": "^3.1.0",
     "eslint": "8.44.0",
@@ -20,6 +22,7 @@
     "react": "18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-dom": "18.2.0",
+    "react-wordpress-comments": "^0.2.0",
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
