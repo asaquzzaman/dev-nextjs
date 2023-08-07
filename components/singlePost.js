@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays, faFolder, faComments } from '@fortawesome/free-solid-svg-icons'
 import { Link, Button } from "@nextui-org/react";
-import WpComments from "react-wordpress-comments"
+// import WpComments from "react-wordpress-comments"
 import "react-wordpress-comments/css/styles.css"
 
 export default function SinglePost( { post } ) {
@@ -36,13 +36,13 @@ export default function SinglePost( { post } ) {
                     </div>
                 </div>
 
-                <WpComments
+                {/* <WpComments
                     maxDepth={3} // provide depth that you want comments to be nested in a list
                     pageId={ post.postId } // id of a page you want to fetch comments from and post to
                     hostUrl="http://wpdevm.atwebpages.com" // url of your WordPress website
                     allowComments={true} // can users post comments?
                     user={null}
-                />
+                /> */}
 
                 <div className='m-auto flex flex-row pb-4'>
                     { ( 

@@ -6,7 +6,7 @@ import { faTwitter, faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/
 export default function SideBar() {
     return ( 
         <div className='h-full flex flex-col'>
-            <div className='w-[200px] h-[200px] relative rounded-full bg-[#2A4B7C] mx-auto mb-[1.5rem]'>
+            <div className='w-[200px] h-[200px] min-h-[200px] relative rounded-full bg-[#2A4B7C] mx-auto mb-[1.5rem]'>
                 <Image
                     src="/mishu.jpg"
                     alt="Mishu"
@@ -25,7 +25,7 @@ export default function SideBar() {
                 <Link className='inline-block mr-[0.5rem] text-[#2A4B7C] py-[0.375rem] px-[0.75rem] border-[1px] border-solid border-[#2A4B7C]' href="#"><FontAwesomeIcon icon={faLinkedinIn} /></Link>
                 <Link className='inline-block mr-[0.5rem] text-[#2A4B7C] py-[0.375rem] px-[0.75rem] border-[1px] border-solid border-[#2A4B7C]' href="#"><FontAwesomeIcon icon={faInstagram} /></Link>
             </div>
-            <Link className='py-[0.5rem] px-[1rem] w-full bg-[#2A4B7C] block text-[#fff] text-[1.25rem] mt-auto' href="">Hire Me</Link>
+            <Link className='py-[0.5rem] px-[1rem] w-full bg-[#2A4B7C] block text-[#fff] text-[1.25rem] mt-auto' href="/contact">Hire Me</Link>
         </div>
     )
 }

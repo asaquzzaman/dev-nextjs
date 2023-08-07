@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { useState } from 'react';
 import { Post } from '@/lib/request'
 import emailjs from '@emailjs/browser';
+import {Code} from "@nextui-org/react";
 
 export default function Contact( { posts } ) {
     // States for contact form fields
@@ -49,7 +50,7 @@ export default function Contact( { posts } ) {
         }
 
         if ( !isValid ) {
-            setShowFailureMessage( 'Please fill all of the required field!' );
+            setShowFailureMessage( 'Please fill all of the required field' );
         }
         return isValid;
     };
@@ -106,8 +107,22 @@ export default function Contact( { posts } ) {
 					<div className='m-8 bg-[#fff]'>
 						<SiteHeader />
 						<div>
-                            <div>{ showSuccessMessage } {showFailureMessage}</div>
-  
+                            {
+                                (showSuccessMessage) &&
+                                <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                                    <span class="font-medium">{ showSuccessMessage }</span>
+                                </div>
+                            }
+
+                            {
+                                (showFailureMessage) &&
+                                <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                                    <span class="font-medium">{ showFailureMessage }</span>
+                                </div>
+                            }
+
+                            
+                            
                             <form
                                 onSubmit={handleSubmit}
                                 className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
