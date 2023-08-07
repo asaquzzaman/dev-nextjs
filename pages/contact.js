@@ -104,7 +104,7 @@ export default function Contact( { posts } ) {
 					<SideBar />
 				</div>
 				<div className='ml-[360px] w-[calc(100%-360px)] after:clear-both sm:float-left sm:w-full sm:ml-0'>
-					<div className='m-8 bg-[#fff]'>
+					<div className='m-8 sm:m-2 sm:mt-8 bg-[#fff]'>
 						<SiteHeader />
 						<div>
                             {
